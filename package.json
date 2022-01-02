@@ -1,0 +1,27 @@
+{
+  "name": "@s1modev/media-upload",
+  "version": "1.0.1",
+  "description": "upload multiple images with preview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s1modev/media-upload.git"
+  },
+  "keywords": [
+    "laravel",
+    "vue",
+    "webdev",
+    "media-upload",
+    "image-upload",
+    "image-preview"
+  ],
+  "author": "s1modev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s1modev/media-upload/issues"
+  },
+  "homepage": "https://github.com/s1modev/media-upload#readme"
+}
