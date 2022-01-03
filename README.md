@@ -13,7 +13,8 @@
 
 # 👀 Demo
 
-<a target="_blank" href="https://github.com/s1modev/media-upload-demo">- Fully featured demo</a>
+- [Fully featured demo](https://github.com/s1modev/media-upload-demo)
+- [Full tutorial](https://dev.to/simodev/how-to-upload-multiple-images-with-preview-using-laravel-and-vue-282j)
 
 ![media-upload - multiple image upload with preview ](/static/media-upload.PNG)
 
