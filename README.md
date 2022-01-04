@@ -6,7 +6,7 @@
 
   🖼️ **media-upload** support **the create and the update form**, and it will handle the upload for you.
 
-  ![media-upload - multiple image upload with preview ](/statis/media-upload.gif)
+  ![media-upload - multiple image upload with preview ](/static/media-upload.gif)
 
 </div>
 
