@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import {UploadMedia} from '@s1modev/media-upload';
+import {UploadMedia} from 'vue-media-upload';
 
 export default {
     data(){

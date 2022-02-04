@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import {UpdateMedia} from '@s1modev/media-upload';
+import {UpdateMedia} from 'vue-media-upload';
 
 export default {
     data(){

@@ -22,12 +22,12 @@
 
 via npm
 ```sh
-npm install @s1modev/media-upload
+npm install vue-media-upload
 ```
 
 or via yarn 
 ```sh
-yarn add @s1modev/media-upload
+yarn add vue-media-upload
 ```
 
 
@@ -36,7 +36,7 @@ yarn add @s1modev/media-upload
 ```javascript
 import { createApp } from 'vue';
 
-import { UploadMedia, UpdateMedia } from '@s1modev/media-upload';
+import { UploadMedia, UpdateMedia } from 'vue-media-upload';
 
 let app=createApp({})
 
@@ -49,7 +49,7 @@ app.mount("#app")
 or
 
 ```javascript
-import {UploadMedia, UpdateMedia} from "@s1modev/media-upload";
+import {UploadMedia, UpdateMedia} from "vue-media-upload";
 export default {
   components: {
     UploadMedia,

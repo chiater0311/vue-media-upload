@@ -1,6 +1,6 @@
 {
-  "name": "@s1modev/media-upload",
-  "version": "1.0.2",
+  "name": "vue-media-upload",
+  "version": "1.0.3",
   "description": "upload multiple images with preview",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,8 @@
     "webdev",
     "media-upload",
     "image-upload",
-    "image-preview"
+    "image-preview",
+    "vue-media-upload"
   ],
   "author": "s1modev",
   "license": "MIT",
