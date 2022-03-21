@@ -93,15 +93,15 @@ This is an example in Laravel blade form.
 
 ## \<upload-media /> component
 
-1. **media-upload** uploads the image `image.jpg` as multipart/form-data using a POST request.
+1. **vue-media-upload** uploads the image `image.jpg` as multipart/form-data using a POST request.
 
 2. **server** temporary saves the image with a unique name `123_image.jpg` in a `/tmp/uploads` file.
 
 3. **server** returns the unique name `123_image.jpg` in a request response.
 
-4. **media-upload** stores the unique name `123_image.jpg` in a hidden input field with `name="media[]"`.
+4. **vue-media-upload** stores the unique name `123_image.jpg` in a hidden input field with `name="media[]"`.
 
-5. **user** submits the media-upload parent form containing the hidden inputs fields the unique images names.
+5. **user** submits the vue-media-upload parent form containing the hidden inputs fields the unique images names.
 
 6. **server** uses the unique images names to move 123_image.jpg from the `/tmp/uploads` file to its final location.
 
@@ -114,15 +114,15 @@ This is an example in Laravel blade form.
 
 ## \<upload-media /> component:
 
-Basically after the image get uploaded the server return the unique image name and **media-upload** stores it in a hidden input field `<input name="media[]">`
+Basically after the image get uploaded the server return the unique image name and **vue-media-upload** stores it in a hidden input field `<input name="media[]">`
 
 ## \<update-media /> component:
 
-- After the server returns the images names, **media-upload** lists them, and in case the user added an new image **media-upload** uploads the image `image.jpg` as multipart/form-data using a POST request and stores the added media unique name in an input `<input name="added_media[]">`
+- After the server returns the images names, **vue-media-upload** lists them, and in case the user added an new image **vue-media-upload** uploads the image `image.jpg` as multipart/form-data using a POST request and stores the added media unique name in an input `<input name="added_media[]">`
 
-- In case the user deleted an image `123_image.jpg` **media-upload** stores it's name in an input field `<input name="deleted_media">`
+- In case the user deleted an image `123_image.jpg` **vue-media-upload** stores it's name in an input field `<input name="deleted_media">`
 
-- In case **media-upload** has at least one image or more listed you will notice that it has also an input field `<input name="media" value="1">`, this input is a way to validate the media as `required`, so if you want make media required in your form, you will only need to add on your backend validation `<input name="media" value="1">` as required `$request->media => 'required'`
+- In case **vue-media-upload** has at least one image or more listed you will notice that it has also an input field `<input name="media" value="1">`, this input is a way to validate the media as `required`, so if you want make media required in your form, you will only need to add on your backend validation `<input name="media" value="1">` as required `$request->media => 'required'`
 
 # ⚙️ Props
 
