@@ -1,12 +1,12 @@
 <div align="center">
 
-  # 🖼️ Media-Upload
+  # 🖼️ vue-media-upload
 
-  📷 **media-upload** is a vue package for multiple images upload with preview.
+  📷 **vue-media-upload** is a vue package for multiple images upload with preview.
 
-  🖼️ **media-upload** support **the create and the update form**, and it will handle the upload for you.
+  🖼️ **vue-media-upload** support **the create and the update form**, and it will handle the upload for you.
 
-  ![media-upload - multiple image upload with preview ](/static/media-upload.gif)
+  ![vue-media-upload - multiple image upload with preview ](/static/media-upload.gif)
 
 </div>
 
@@ -16,7 +16,7 @@
 - [Fully featured demo](https://github.com/s1modev/media-upload-demo)
 - [Full tutorial](https://dev.to/simodev/how-to-upload-multiple-images-with-preview-using-laravel-and-vue-282j)
 
-![media-upload - multiple image upload with preview ](/static/media-upload.PNG)
+![vue-media-upload - multiple image upload with preview ](/static/media-upload.PNG)
 
 # 💻 Install
 
@@ -87,9 +87,9 @@ This is an example in Laravel blade form.
 </div>
 ```
 
-# 📙 How does media-upload works?
+# 📙 How does vue-media-upload works?
 
-**media-upload** contains two components `<upload-media />` for the create form and `<update-media />` for the update form!
+**vue-media-upload** contains two components `<upload-media />` for the create form and `<update-media />` for the update form!
 
 ## \<upload-media /> component
 
@@ -122,7 +122,7 @@ Basically after the image get uploaded the server return the unique image name a
 
 - In case the user deleted an image `123_image.jpg` **media-upload** stores it's name in an input field `<input name="deleted_media">`
 
-- I case **media-upload** has at least one image or more listed you will notice that it has also an input field `<input name="media" value="1">`, this input is a way to validate the media as `required`, so if you want make media required in your form, you will only need to add on your backend validation `<input name="media" value="1">` as required `$request->media => 'required'`
+- In case **media-upload** has at least one image or more listed you will notice that it has also an input field `<input name="media" value="1">`, this input is a way to validate the media as `required`, so if you want make media required in your form, you will only need to add on your backend validation `<input name="media" value="1">` as required `$request->media => 'required'`
 
 # ⚙️ Props
 
@@ -173,7 +173,7 @@ Basically after the image get uploaded the server return the unique image name a
 
 # ⭐️ Support
 
-![media-upload - multiple image upload with preview ](/static/media-upload.PNG)
+![vue-media-upload - multiple image upload with preview ](/static/media-upload.PNG)
 
 If you like this project, You can support me with starring ⭐ this repository.
 
