@@ -99,7 +99,8 @@
 </template>
 
 <script>
-import Loader from './loader/index.vue';
+    import Loader from './loader/index.vue';
+    import axios from 'axios'
 
     export default {
         
@@ -231,7 +232,7 @@ import Loader from './loader/index.vue';
 }
 .close-btn{
     background: none !important;
-	color: white !important;
+	color:red !important;
 	border: none !important;
 	padding: 0px !important;
     margin:0px !important;
@@ -239,11 +240,9 @@ import Loader from './loader/index.vue';
 	cursor: pointer !important;
 	outline: inherit !important;
     position: relative !important;
-    left: -146px !important;
-    top: -25px !important;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    right: 47px !important;
+    top: -23px !important;
     width: 0px !important;
-
 }
 .times-icon{
     font-size: 3rem !important;
@@ -261,8 +260,7 @@ import Loader from './loader/index.vue';
     color: #29818f !important;
 }
 .close-btn:hover{
-    color: red !important;
-    box-shadow: red 0px 7px 29px 0px !important;
+    color: rgb(190, 39, 39) !important;
 }
 
 
