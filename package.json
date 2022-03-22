@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/s1modev/media-upload.git"
+    "url": "git+https://github.com/s1modev/vue-media-upload.git"
   },
   "keywords": [
     "laravel",
@@ -22,7 +22,7 @@
   "author": "s1modev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/s1modev/media-upload/issues"
+    "url": "https://github.com/s1modev/vue-media-upload/issues"
   },
-  "homepage": "https://github.com/s1modev/media-upload#readme"
+  "homepage": "https://github.com/s1modev/vue-media-upload#readme"
 }
