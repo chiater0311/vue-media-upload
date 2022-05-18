@@ -204,6 +204,7 @@
     height: 200px !important;
     padding-top: -14px !important;
     transition: filter 0.1s linear;
+    object-fit: contain;
     
 }
 .images-preview:hover{
@@ -229,7 +230,7 @@
 	outline: inherit !important;
     position: relative !important;
     right: 34px !important;
-    top: -27px !important;
+    top: -80px !important;
     width: 0px !important;
 }
 .times-icon{
