@@ -105,7 +105,9 @@
             async fileChange(event){
                 this.loading=true
                 let files = event.target.files
+				console.log(files);
                 for(var i=0; i < files.length; i++){
+					
                     let formData = new FormData
                     let url = URL.createObjectURL(files[i])
                     formData.set('image', files[i])
