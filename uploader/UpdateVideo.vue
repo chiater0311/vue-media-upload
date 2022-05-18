@@ -32,7 +32,7 @@
 
                     <!--IMAGES PREVIEW-->
                     
-                    <div v-for="(image, index) in saved_video" :key="index" class="image-container image-margin">
+                    <div v-for="(image, index) in saved_video" :key="index" class="video-container image-margin">
                         <video :src="media_file_path +'/'+ image.name" alt=""  class="videos_preview" controls></video>
                         <button @click="remove_saved_video(index)" class="close-btn" type="button">
                             <svg 
@@ -50,7 +50,7 @@
 
                         </button>
                     </div>
-                    <div v-for="(image, index) in added_video" :key="index" class="image-container image-margin">
+                    <div v-for="(image, index) in added_video" :key="index" class="video-container image-margin">
                         <video :src="image.url" alt=""  class="videos_preview" controls></video>
                         <button @click="remove(index)" class="close-btn" type="button">
                             <svg 
@@ -192,18 +192,18 @@
 .videos-upload:hover{
     background-color: #f1f1f1 !important;
 }
-.image-container{
+.video-container{
     display: inline-table !important;
-    height: 90px !important;
-    width: 140px !important;
+    height: 200px !important;
+    width: 200px !important;
     display: flex !important;
 }
 .videos_preview {
     border-radius: 5px !important;
     border: 1px solid #ccc !important;
     display: inline-block !important;
-    width: 140px !important;
-    height: 88px !important;
+    width: 200px !important;
+    height: 200px !important;
     padding-top: -14px !important;
     transition: filter 0.1s linear;
     
