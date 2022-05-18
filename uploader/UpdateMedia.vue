@@ -27,7 +27,7 @@
                                     </g>
                             </svg>
                         </label>     
-                        <input @change="fileChange" id="images-upload" type="file" accept="image/*" multiple hidden>
+                        <input @change="fileChange" id="images-upload" type="file" accept="video/mp4,video/x-m4v,video/*" multiple hidden>
                     </div>
 
                     <!--IMAGES PREVIEW-->
