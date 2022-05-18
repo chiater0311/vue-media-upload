@@ -192,16 +192,16 @@
 }
 .image-container{
     display: inline-table !important;
-    height: 90px !important;
-    width: 140px !important;
+    height: 200px !important;
+    width: 200px !important;
     display: flex !important;
 }
 .images-preview {
     border-radius: 5px !important;
     border: 1px solid #ccc !important;
     display: inline-block !important;
-    width: 140px !important;
-    height: 88px !important;
+    width: 200px !important;
+    height: 200px !important;
     padding-top: -14px !important;
     transition: filter 0.1s linear;
     
