@@ -33,7 +33,7 @@
                     <!--IMAGES PREVIEW-->
                     
                     <div v-for="(image, index) in saved_video" :key="index" class="video-container image-margin">
-                        <video :src="media_file_path +'/'+ image.name" alt=""  class="videos_preview" controls></video>
+                        <video :src="media_file_path +'/'+ image.name" alt=""  class="videos_preview" controls controlsList="nodownload"></video>
                         <button @click="remove_saved_video(index)" class="close-btn" type="button">
                             <svg 
                                 class='times-icon' 
@@ -51,7 +51,7 @@
                         </button>
                     </div>
                     <div v-for="(image, index) in added_video" :key="index" class="video-container image-margin">
-                        <video :src="image.url" alt=""  class="videos_preview" controls></video>
+                        <video :src="image.url" alt=""  class="videos_preview" controls controlsList="nodownload"></video>
                         <button @click="remove(index)" class="close-btn" type="button">
                             <svg 
                                 class='times-icon' 
@@ -231,7 +231,7 @@
 	outline: inherit !important;
     position: relative !important;
     right: 34px !important;
-    top: -27px !important;
+    top: -80px !important;
     width: 0px !important;
 }
 .times-icon{
