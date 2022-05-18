@@ -12,7 +12,7 @@
                     
                     <!--UPLOAD BUTTON-->
                     <div class="button-container image-margin">
-                        <label for="images-upload" class="images-upload">
+                        <label for="videos-upload" class="videos-upload">
                             <svg
                                 class="custum-icon"
                                 xmlns="http://www.w3.org/2000/svg" 
@@ -27,14 +27,14 @@
                                     </g>
                             </svg>
                         </label>     
-                        <input @change="fileChange" id="images-upload" type="file" accept="video/mp4,video/x-m4v,video/*" multiple hidden>
+                        <input @change="fileVideoChange" id="videos-upload" type="file" accept="video/mp4,video/x-m4v,video/*" multiple hidden>
                     </div>
 
                     <!--IMAGES PREVIEW-->
                     
-                    <div v-for="(image, index) in saved_media" :key="index" class="image-container image-margin">
+                    <div v-for="(image, index) in saved_video" :key="index" class="image-container image-margin">
                         <img :src="media_file_path +'/'+ image.name" alt=""  class="images-preview">
-                        <button @click="remove_saved_media(index)" class="close-btn" type="button">
+                        <button @click="remove_saved_video(index)" class="close-btn" type="button">
                             <svg 
                                 class='times-icon' 
                                 xmlns="http://www.w3.org/2000/svg" 
@@ -50,7 +50,7 @@
 
                         </button>
                     </div>
-                    <div v-for="(image, index) in added_media" :key="index" class="image-container image-margin">
+                    <div v-for="(image, index) in added_video" :key="index" class="image-container image-margin">
                         <img :src="image.url" alt=""  class="images-preview">
                         <button @click="remove(index)" class="close-btn" type="button">
                             <svg 
@@ -73,13 +73,13 @@
         <div v-if='error' id="media-required">
             <p class='red-text'>{{error}}</p>
         </div>
-        <div v-for="(image, index) in added_media" :key="index" class="m-top">
-            <input type="text" name="added_media[]" :value="image.name" hidden>
+        <div v-for="(image, index) in added_video" :key="index" class="m-top">
+            <input type="text" name="added_video[]" :value="image.name" hidden>
         </div>
-        <div v-for="(image, index) in deleted_media" :key="index" class="m-top">
-            <input type="text" name="deleted_media[]" :value="image.name" hidden>
+        <div v-for="(image, index) in deleted_video" :key="index" class="m-top">
+            <input type="text" name="deleted_video[]" :value="image.name" hidden>
         </div>
-        <div v-if="added_media.length||saved_media.length" class="m-top">
+        <div v-if="added_video.length||saved_video.length" class="m-top">
             <input type="text" name="media" value="1" hidden>
         </div>
     </div>
@@ -93,16 +93,16 @@
         
         data(){
             return{
-                added_media:[],
+                added_video:[],
             
-                saved_media:[],
-                deleted_media:[],
+                saved_video:[],
+                deleted_video:[],
 
                 loading:true
             }
         },
         methods:{
-            async fileChange(event){
+            async fileVideoChange(event){
                 this.loading=true
                 let files = event.target.files
 				console.log(files);
@@ -113,24 +113,24 @@
                     formData.set('image', files[i])
                     const {data} = await axios.post(this.server, formData)
                         
-                    this.added_media.push({url:url, name:data.name, size:files[i].size, type:files[i].type});
+                    this.added_video.push({url:url, name:data.name, size:files[i].size, type:files[i].type});
                 }
                 this.loading=false
                 this.media_emit()
             },
             remove(index){
-                this.added_media.splice(index,1)
+                this.added_video.splice(index,1)
                 this.media_emit()
             },
-            remove_saved_media(index){
-                this.deleted_media.push({name:this.saved_media[index].name});
-                this.saved_media.splice(index,1)
+            remove_saved_video(index){
+                this.deleted_video.push({name:this.saved_video[index].name});
+                this.saved_video.splice(index,1)
                 this.media_emit()
             },
             media_emit(){
-                this.$emit('added-media',this.added_media)
-                this.$emit('deleted-media', this.deleted_media)
-                this.$emit('saved-media', this.saved_media)
+                this.$emit('added-video',this.added_video)
+                this.$emit('deleted-video', this.deleted_video)
+                this.$emit('saved-video', this.saved_video)
             }
             
         },
@@ -152,7 +152,7 @@
         mounted() {
             axios.get(this.media_server)
                 .then(response=>{
-                    this.saved_media=response.data.media
+                    this.saved_video=response.data.media
                     this.loading = false
                     
                     this.media_emit()
@@ -180,7 +180,7 @@
     height: auto !important;
 }
 
-.images-upload {
+.videos-upload {
     background-color: #ffffff !important;
     border-radius: 5px !important;
     border: 1px dashed #ccc !important;
@@ -189,7 +189,7 @@
     width: 165px !important;
     height: 88px !important;
 }
-.images-upload:hover{
+.videos-upload:hover{
     background-color: #f1f1f1 !important;
 }
 .image-container{
