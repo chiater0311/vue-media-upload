@@ -231,7 +231,6 @@
     position: relative !important;
     right: 34px !important;
     top: -80px !important;
-    width: 0px !important;
 }
 .times-icon{
     font-size: 3rem !important;
